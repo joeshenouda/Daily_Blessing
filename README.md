@@ -58,6 +58,12 @@ Build the static website with `node scripts/build.mjs`. The generated `dist/` di
 
 The hosted app keeps reflections and progress in each browser. Localhost journal entries are not transferred to the hosted site, and entries do not synchronize between devices. Export the journal to keep a separate copy.
 
+### GitHub Pages
+
+The app also supports GitHub Pages, including project URLs such as `https://YOUR-USERNAME.github.io/Daily_Blessing/`. Assets and PDF links use relative paths, so both a project subdirectory and a custom domain work.
+
+Push the project to a GitHub repository with a `main` branch. In the repository’s **Settings → Pages**, select **GitHub Actions** as the publishing source. The included `.github/workflows/pages.yml` checks the assignments, builds the static site, and publishes `dist/` after each push to `main`. No hosting credentials or npm dependencies are required by the workflow. The source PDFs are included in the repository and hosted website.
+
 ## Verify
 
 ```sh

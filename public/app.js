@@ -44,7 +44,7 @@ function persist(key, value) {
 function book() { return getBook(state.data, state.grade); }
 function currentEntry() { return book().assignments[state.date]; }
 function record(date = state.date) { return state.progress[progressKey(state.grade, date)] || {}; }
-function sourceUrl(entry) { return `/data/${encodeURIComponent(entry.source)}#page=${entry.page}`; }
+function sourceUrl(entry) { return `./data/${encodeURIComponent(entry.source)}#page=${entry.page}`; }
 function updateUrl() {
   const next = new URL(location.href);
   next.searchParams.set('grade', state.grade);
@@ -71,7 +71,7 @@ function weekDates() {
 function render() {
   document.querySelector('#app').innerHTML = `
     <aside class="sidebar">
-      <a class="brand" href="/" aria-label="Daily Blessings home"><img src="/icon.svg" alt="" width="40" height="40"><span>Daily Blessings<small>A LITTLE TIME IN THE WORD</small></span></a>
+      <a class="brand" href="./" aria-label="Daily Blessings home"><img src="./icon.svg" alt="" width="40" height="40"><span>Daily Blessings<small>A LITTLE TIME IN THE WORD</small></span></a>
       <div class="school-year"><span class="live-dot"></span>2026 – 2027 EDITION</div>
       <div class="grade-section"><label for="grade">YOUR GRADE</label><div class="select-wrap">${icon('book')}<select id="grade">${Array.from({ length: 8 }, (_, index) => `<option value="${index + 1}" ${state.grade === index + 1 ? 'selected' : ''}>Grade ${index + 1}</option>`).join('')}</select></div>${state.grade === 3 || state.grade === 4 ? '<small>Grades 3 & 4 share a reading book.</small>' : '<small>Your own journey, one day at a time.</small>'}</div>
       <nav aria-label="Main navigation">${[['reading', 'sun', 'Daily reading'], ['calendar', 'calendar', 'Reading calendar'], ['journal', 'journal', 'My journal'], ['library', 'book', 'Reading library']].map(([view, symbol, label]) => `<button data-view="${view}" class="nav-item ${state.view === view ? 'active' : ''}" ${state.view === view ? 'aria-current="page"' : ''}>${icon(symbol)}${label}${view === 'reading' ? '<span class="nav-dot"></span>' : ''}</button>`).join('')}</nav>
@@ -138,7 +138,7 @@ function journalPage() {
 }
 
 function libraryPage() {
-  return `<div class="library-intro">${icon('book')}<p>Original books from St. Mary Coptic Orthodox Church. Readings and questions retain the source wording; dates follow each book’s printed calendar.</p></div><div class="library-grid">${state.data.books.map(source => `<article class="book-card"><div class="book-cover"><span>ST. MARY COPTIC ORTHODOX CHURCH</span><span class="cover-cross">✣</span><h2>Daily<br>Blessings</h2><p>${source.grades.length > 1 ? 'Grades 3 & 4' : `Grade ${source.grades[0]}`}</p><small>2026 – 2027</small></div><div class="book-details"><h3>${source.grades.length > 1 ? 'Grades 3 & 4' : `Grade ${source.grades[0]}`}</h3><p>${source.assignmentCount} daily entries · ${source.pageCount} pages</p><small>${prettyDate(source.startDate)} – ${prettyDate(source.endDate)}</small><a class="source-link" href="/data/${encodeURIComponent(source.file)}" target="_blank" rel="noopener">Open reading book ${icon('external')}</a></div></article>`).join('')}</div>`;
+  return `<div class="library-intro">${icon('book')}<p>Original books from St. Mary Coptic Orthodox Church. Readings and questions retain the source wording; dates follow each book’s printed calendar.</p></div><div class="library-grid">${state.data.books.map(source => `<article class="book-card"><div class="book-cover"><span>ST. MARY COPTIC ORTHODOX CHURCH</span><span class="cover-cross">✣</span><h2>Daily<br>Blessings</h2><p>${source.grades.length > 1 ? 'Grades 3 & 4' : `Grade ${source.grades[0]}`}</p><small>2026 – 2027</small></div><div class="book-details"><h3>${source.grades.length > 1 ? 'Grades 3 & 4' : `Grade ${source.grades[0]}`}</h3><p>${source.assignmentCount} daily entries · ${source.pageCount} pages</p><small>${prettyDate(source.startDate)} – ${prettyDate(source.endDate)}</small><a class="source-link" href="./data/${encodeURIComponent(source.file)}" target="_blank" rel="noopener">Open reading book ${icon('external')}</a></div></article>`).join('')}</div>`;
 }
 
 function bindShell() {
@@ -235,7 +235,7 @@ window.addEventListener('pagehide', flushNote);
 document.addEventListener('visibilitychange', () => { if (document.hidden) flushNote(); });
 
 try {
-  const response = await fetch('/assignments.json');
+  const response = await fetch('./assignments.json');
   if (!response.ok) throw new Error('Could not load assignments');
   state.data = await response.json();
   render();
