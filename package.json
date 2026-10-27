@@ -1,0 +1,14 @@
+{
+  "name": "daily-blessings",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "extract": "python3 scripts/extract_assignments.py"
+  },
+  "engines": { "node": ">=20" }
+}

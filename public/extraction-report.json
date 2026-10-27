@@ -1,0 +1,126 @@
+[
+  {
+    "file": "1-Daily Blessings-26-27.pdf",
+    "grades": [
+      1
+    ],
+    "assignmentCount": 357,
+    "headingCount": 360,
+    "startDate": "2026-09-26",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": [
+      {
+        "date": "2026-09-26",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      },
+      {
+        "date": "2026-09-27",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      },
+      {
+        "date": "2026-09-28",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      }
+    ]
+  },
+  {
+    "file": "2-Daily Blessings-26-27.pdf",
+    "grades": [
+      2
+    ],
+    "assignmentCount": 378,
+    "headingCount": 381,
+    "startDate": "2026-09-05",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": [
+      {
+        "date": "2026-09-05",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      },
+      {
+        "date": "2026-09-06",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      },
+      {
+        "date": "2026-09-07",
+        "page": 12,
+        "message": "Identical repeated assignment; retained once."
+      }
+    ]
+  },
+  {
+    "file": "3-4-Daily Blessings-26-27.pdf",
+    "grades": [
+      3,
+      4
+    ],
+    "assignmentCount": 364,
+    "headingCount": 364,
+    "startDate": "2026-10-03",
+    "endDate": "2027-10-01",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": []
+  },
+  {
+    "file": "5-Daily Blessings-26-27.pdf",
+    "grades": [
+      5
+    ],
+    "assignmentCount": 378,
+    "headingCount": 378,
+    "startDate": "2026-09-05",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": []
+  },
+  {
+    "file": "6-Daily Blessings-26-27.pdf",
+    "grades": [
+      6
+    ],
+    "assignmentCount": 378,
+    "headingCount": 378,
+    "startDate": "2026-09-05",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": []
+  },
+  {
+    "file": "7-Daily Blessings-26-27.pdf",
+    "grades": [
+      7
+    ],
+    "assignmentCount": 378,
+    "headingCount": 378,
+    "startDate": "2026-09-05",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": []
+  },
+  {
+    "file": "8-Daily Blessings-26-27.pdf",
+    "grades": [
+      8
+    ],
+    "assignmentCount": 378,
+    "headingCount": 378,
+    "startDate": "2026-09-05",
+    "endDate": "2027-09-17",
+    "missingDates": [],
+    "issues": [],
+    "duplicates": []
+  }
+]

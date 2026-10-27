@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203c36">
+  <meta name="description" content="A little time in the Word. Daily Bible readings and questions for grades 1–8 at St. Mary Coptic Orthodox Church.">
+  <title>Daily Blessings · A little time in the Word</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to daily reading</a>
+  <div id="app"><div class="loading"><span class="loading-cross">✣</span><h1>Daily Blessings</h1><p>Opening your reading…</p></div></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-head"><h2 id="search-title">Find a reading</h2><button class="icon-button" id="close-search" aria-label="Close search">×</button></div>
+    <label for="search-input">Search this grade’s readings and questions</label>
+    <input type="search" id="search-input" placeholder="Try Genesis, kindness, or Moses…" autocomplete="off">
+    <div id="search-results" aria-live="polite"><p class="muted">Start typing to explore your book.</p></div>
+  </dialog>
+</body>
+</html>
